@@ -1,1 +1,65 @@
-<h1>This is a trash talk generator.</h1>
+<header>
+  {{!-- navbar --}}
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Trash Talk Generator</a>
+    </div>
+  </nav>
+</header>
+
+<div class="container">
+  <p>
+  <h2 style="text-align: center">你想對誰說幹話？</h2>
+  </p>
+  <form method="POST" action="/">
+    <div class="row">
+      <div class="card m-3" style="width: 18rem; height: 15rem">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+          class="card-img-top" alt="..." style="height: 180px;">
+        <div class="card-body">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="engineer" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              工程師
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="card m-3" style="width: 18rem; height: 15rem">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+          class="card-img-top" alt="..." style="height: 180px">
+        <div class=" card-body">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="designer" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              設計師
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="card m-3" style="width: 18rem; height: 15rem">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+          class="card-img-top" alt="..." style="height: 180px">
+        <div class="card-body">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="entrepreneur" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              創業家
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <button>
+        講RRR
+      </button>
+
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="display:inline-block;"></textarea>
+    </div>
+  </form>
+
+</div>
