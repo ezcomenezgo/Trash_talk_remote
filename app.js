@@ -1,8 +1,10 @@
 // includes related packages in project
 const express = require('express')
+const app = express()
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
-const app = express()
+const generateTrashtalk = require('./generate_trashtalk')
+const checkCareer = require('./check_career')
 const port = 3000
 
 // setting template engine
@@ -21,8 +23,10 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', (req, res) => {
-  console.log('req.body', req.body)
-  res.render('index')
+  console.log('req.body', req.body.target)
+  const talk = generateTrashtalk(req.body.target)
+  const careerTitle = checkCareer(req.body.target)
+  res.render('index', { talk, careerTitle })
 })
 
 // start and listen the server

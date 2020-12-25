@@ -1,6 +1,6 @@
 <header>
   {{!-- navbar --}}
-  <nav class="navbar navbar-light bg-light">
+  <nav class="navbar navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Trash Talk Generator</a>
     </div>
@@ -18,7 +18,8 @@
           class="card-img-top" alt="..." style="height: 180px;">
         <div class="card-body">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="engineer" id="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="target" id="engineer" value="engineer" {{#if
+              careerTitle.engineer}}checked{{/if}}>
             <label class="form-check-label" for="flexRadioDefault1">
               工程師
             </label>
@@ -31,7 +32,8 @@
           class="card-img-top" alt="..." style="height: 180px">
         <div class=" card-body">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="designer" id="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="target" id="designer" value="designer" {{#if
+              careerTitle.designer}}checked{{/if}}>
             <label class="form-check-label" for="flexRadioDefault1">
               設計師
             </label>
@@ -44,7 +46,8 @@
           class="card-img-top" alt="..." style="height: 180px">
         <div class="card-body">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="entrepreneur" id="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="target" id="enterpreneur" value="enterpreneur" {{#if
+              careerTitle.enterpreneur}}checked{{/if}}>
             <label class="form-check-label" for="flexRadioDefault1">
               創業家
             </label>
@@ -54,11 +57,15 @@
     </div>
 
     <div class="mb-3">
-      <button>
-        講RRR
-      </button>
-
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="display:inline-block;"></textarea>
+      <span>
+        <button>
+          講RRR
+        </button>
+      </span>
+      <span>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+          style="display:inline-block;">{{ talk }}</textarea>
+      </span>
     </div>
   </form>
 
